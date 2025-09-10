@@ -1,0 +1,113 @@
+footer {
+    font-family: "Karla", sans-serif;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 176px 112px 176px;
+    max-width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    gap: 150px;
+}
+
+.info-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+}
+
+.left-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    width: fit-content;
+    padding-right: 86px;
+    padding-bottom: 0;
+
+}
+
+.text-container {
+    text-align: center;
+}
+
+.left-card h2 {
+    color: #000;
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    gap: 10px;
+}
+
+
+.center-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    width: fit-content;
+    padding-right: 86px;
+    padding-left: 86px;
+    padding-bottom: 0;
+}
+
+.center-card h2 {
+    color: #000;
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    white-space: nowrap;
+    min-width: max-content;
+}
+
+.right-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    width: fit-content;
+    padding-left: 86px;
+    padding-right: 25px;
+    padding-bottom: 0;
+}
+
+.right-card h2 {
+    color: #000;
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+.copyRight {
+    width: auto;
+    background-color: #4b4b4b;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+  }
+
+  .copyRight span {
+    color: #fff;
+    text-align: center;
+    font-size: "14px";
+    font-weight: 500;
+    line-height: normal;
+  }

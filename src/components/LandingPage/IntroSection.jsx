@@ -22,7 +22,7 @@ function IntroSection(props) {
             characters to meet, or adventures to dive into. So grab your spot,
             power up your imagination, and let the stories zap you away!
           </p>
-          <Buttons first="Sign Up!" second="Log In!" />
+          <Buttons first="Sign Up!" second="Log In!"  toggleLoginForm={props.toggleLoginForm}   />
         </div>
         <img
           src={IntroPunch}
