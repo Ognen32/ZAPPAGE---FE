@@ -226,3 +226,183 @@
     font-weight: 400;
     line-height: normal;
 }
+
+/*Look up a comic section*/
+
+.catalog {
+    display: flex;
+    min-height: 855.671px;
+    width: 100%;
+    position: relative;
+  justify-content: center;
+    align-items: center;
+    gap: 49px;
+    flex-shrink: 0;
+    align-self: stretch;
+    aspect-ratio: 1442.00/855.67;
+    overflow: hidden;
+
+}
+
+.catalog-center {
+    display: flex;
+    width: 1210px;
+    min-height: 850px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.lightning-left {
+  position: absolute;   
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 100%;
+  width: auto;
+  left: -70px;
+}
+
+.lightning-left img {
+  width: 300px;   
+  height: auto;   
+  object-fit: contain;
+  animation: blink 2s infinite;
+  transform-origin: center;
+}
+
+.lightning-right {
+  position: absolute;   
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: auto;
+  right: -70px;
+}
+
+.lightning-right img {
+  width: 300px;  
+  height: auto;
+  object-fit: contain;
+  animation: blink 2s infinite;
+  transform-origin: center;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+    transform:scale(1);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  20% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  40% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+}
+
+.lookUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: fit-content;
+    height: fit-content;
+    gap: 15px;
+}
+
+.lookUp h1 {
+    color: #000000;
+    font-size: 3rem;
+    font-family: "Karla", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+.lookup-inputs {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap; 
+    font-family: "Karla", sans-serif;
+    border: 1.5px solid #000000;
+    border-radius: 3px;
+    padding-left: 10px;
+  }
+
+  .search-input {
+    height: 35px;
+    width: 240px;
+    border-right: none;
+    position: relative;
+    border: 1.5px solid #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 2rem;
+  }
+  .search-input::placeholder {
+    font-family: "Karla", sans-serif; 
+    font-size: 2rem;
+    color: #a5a5a5
+    
+  }
+
+  .search-input:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+
+  .genre-dropdown {
+    border: 10px ;
+    background-color: transparent; 
+    color: #a5a5a5;
+    font-size: 2.0rem;
+    width: fit-content;
+    min-width: 200px;
+    appearance: none; 
+    -webkit-appearance: none; /* for Safari */
+    -moz-appearance: none; /* for Firefox */
+  }
+
+  .comics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 87px;
+    justify-content: center;
+    padding: 40px 0;
+    max-width: 100%;
+  }
+  
+  .comic-card img {
+    width: 160px;
+    height: 251px;
+    object-fit: cover;
+    border-radius: 3px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease;
+  }
+  
+  .comic-card img:hover {
+    transform: scale(1.05);
+  }
