@@ -1,7 +1,7 @@
 import React from "react";
 import Shelfs from "./Shelfs";
 
-function TrendingComics(props) {
+function TrendingComics({ comics = [] }) {
   return (
     <div id="trending" className="trending-div">
       <div
@@ -14,10 +14,12 @@ function TrendingComics(props) {
         <h2
           style={{
             color: "#fff",
-            fontSize: "4.8rem",
+            fontSize: "3.5rem",
             margin: 0,
             lineHeight: "normal",
-            fontWeight: 700,
+            fontWeight: 400,
+            fontFamily: "sans-serif",
+            fontStyle: "Karla"
           }}
         >
           Comics
@@ -25,17 +27,19 @@ function TrendingComics(props) {
         <p
           style={{
             color: "#fff",
-            fontSize: "2.4rem",
+            fontSize: "2rem",
             fontStyle: "normal",
-            fontWeight: 600,
+            fontWeight: 400,
             lineHeight: "normal",
             margin: 0,
+            fontFamily: "sans-serif",
+            fontStyle: "Karla"
           }}
         >
           Trending Comics
         </p>
       </div>
-      <Shelfs comics={props.comics} />
+      <Shelfs comics={comics} />
     </div>
   );
 }

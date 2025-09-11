@@ -1,15 +1,15 @@
 import React from "react";
 import Comics from "./ComicsOnShelfs";
 
-function Shelf(props) {
+function Shelf({ comics, start, end, right, left }) {
   return (
     <div className="shelf-div">
       <Comics
-        comics={props.comics}
-        start={props.start}
-        end={props.end}
-        right={props.right}
-        left={props.left}
+        comics={comics}
+        start={start}
+        end={end}
+        right={right}
+        left={left}
       />
       <div
         id="shelf"

@@ -96,6 +96,18 @@ footer {
     margin: 0;
 }
 
+.fire-div img {
+  width: 25%;
+  height: auto;
+  animation: burn 5s ease-in-out infinite alternate
+}
+
+@keyframes burn {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(10px); }  
+  100% { transform: translateX(-10px); }
+}
+
 .copyRight {
     width: auto;
     background-color: #4b4b4b;

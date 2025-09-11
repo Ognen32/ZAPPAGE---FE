@@ -1,5 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
+/*Header*/
+#home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  padding: 18px 119px;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+#nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 33px;
+  font-size: 2rem;
+}
+
+#nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+}
+
+#nav a:hover {
+  color: #0000dc;
+  transform: scale(1.1);
+  transition: all 0.5s ease-out;
+
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 10px;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  display: block;
+}
 
 /*intro section*/
 .intro {
@@ -148,133 +194,201 @@
 
 /*Genres section*/
 .genres {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    height: fit-content;
-    padding: 10px 120px 20px 120px;
-    box-sizing: border-box;
-    gap: 20px;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: fit-content;
+  padding: 10px 120px 20px 120px;
+  box-sizing: border-box;
+  gap: 20px;
 }
 
 .genres h2 {
-    font-size: 3rem;
-    color: #000;
-    font-family: "Karla", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin: 0;
-    transform: scale(0); 
-    animation: scaleUp 0.8s ease-out forwards;
-
+  font-size: 3rem;
+  color: #000;
+  font-family: "Karla", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  transform: scale(0);
+  animation: scaleUp 0.8s ease-out forwards;
 }
 
 @keyframes scaleUp {
-    from {
-      transform: scale(0);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
+  from {
+    transform: scale(0);
+    opacity: 0;
   }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
-  .marquee {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    justify-content: flex-start; 
-    padding: 10px 0px 10px 0px;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
+.marquee {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: flex-start;
+  padding: 10px 0px 10px 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
 
 .genre-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 155px;
-    height: fit-content;
-    gap: 22px;
-    margin-left: 25px;
-    margin-right: 25px;
-    flex-shrink: 0; 
-    transition: all 0.1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 155px;
+  height: fit-content;
+  gap: 22px;
+  margin-left: 25px;
+  margin-right: 25px;
+  flex-shrink: 0;
+  transition: all 0.1s ease-in-out;
 }
 
 .genre-item:hover {
-    transform: scale(1.1);
-    transition: all 0.1s ease-in-out;
-    
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
 }
 
 .genre-item img {
-    width: 121px;
-    height: 121px;
+  width: 121px;
+  height: 121px;
 }
 
 .genre-item p {
-    color: #000;
-    font-size: 2.0rem;
-    margin: 0;
-    font-family: "Karla", sans-serif;
-    font-weight: 400;
-    line-height: normal;
+  color: #000;
+  font-size: 2rem;
+  margin: 0;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/*Trending Comics section*/
+.trending-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  max-width: 100%;
+  padding: 30px 119px 30px 119px;
+  height: 1443px;
+  background-color: #a5a5a5;
+  box-sizing: border-box;
+  gap: 50px;
+}
+
+.shelfs-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  height: fit-content;
+  gap: 150px;
+}
+
+.shelf-div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+}
+
+.TrendingComic {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-around;
+  padding-left: 70px;
+  padding-right: 70px;
+  max-width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+}
+
+.bomb {
+  cursor: pointer;
+  position: absolute;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform-origin: center center;
+}
+
+.bomb:hover {
+  animation: explode 0.6s forwards ease-out;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  30% {
+    transform: scale(1.4) rotate(10deg);
+    opacity: 0.9;
+  }
+  60% {
+    transform: scale(1.8) rotate(15deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(2.5) rotate(20deg);
+    opacity: 0;
+  }
 }
 
 /*Look up a comic section*/
 
 .catalog {
-    display: flex;
-    min-height: 855.671px;
-    width: 100%;
-    position: relative;
+  display: flex;
+  min-height: 855.671px;
+  width: 100%;
+  position: relative;
   justify-content: center;
-    align-items: center;
-    gap: 49px;
-    flex-shrink: 0;
-    align-self: stretch;
-    aspect-ratio: 1442.00/855.67;
-    overflow: hidden;
-
+  align-items: center;
+  gap: 49px;
+  flex-shrink: 0;
+  align-self: stretch;
+  aspect-ratio: 1442/855.67;
+  overflow: hidden;
 }
 
 .catalog-center {
-    display: flex;
-    width: 1210px;
-    min-height: 850px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 80px;
+  display: flex;
+  width: 1210px;
+  min-height: 850px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 80px;
 }
 
 .lightning-left {
-  position: absolute;   
+  position: absolute;
   top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
   height: 100%;
   width: auto;
   left: -70px;
 }
 
 .lightning-left img {
-  width: 300px;   
-  height: auto;   
+  width: 300px;
+  height: auto;
   object-fit: contain;
   animation: blink 2s infinite;
   transform-origin: center;
 }
 
 .lightning-right {
-  position: absolute;   
+  position: absolute;
   top: 0;
   right: 0;
   display: flex;
@@ -286,7 +400,7 @@
 }
 
 .lightning-right img {
-  width: 300px;  
+  width: 300px;
   height: auto;
   object-fit: contain;
   animation: blink 2s infinite;
@@ -296,7 +410,7 @@
 @keyframes blink {
   0% {
     opacity: 0.2;
-    transform:scale(1);
+    transform: scale(1);
   }
   10% {
     opacity: 1;
@@ -321,88 +435,87 @@
 }
 
 .lookUp {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    width: fit-content;
-    height: fit-content;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: fit-content;
+  height: fit-content;
+  gap: 15px;
 }
 
 .lookUp h1 {
-    color: #000000;
-    font-size: 3rem;
-    font-family: "Karla", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin: 0;
+  color: #000000;
+  font-size: 3rem;
+  font-family: "Karla", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
 }
 .lookup-inputs {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap; 
-    font-family: "Karla", sans-serif;
-    border: 1.5px solid #000000;
-    border-radius: 3px;
-    padding-left: 10px;
-  }
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: "Karla", sans-serif;
+  border: 1.5px solid #000000;
+  border-radius: 3px;
+  padding-left: 10px;
+}
 
-  .search-input {
-    height: 35px;
-    width: 240px;
-    border-right: none;
-    position: relative;
-    border: 1.5px solid #000000;
-    border: none;
-    border-radius: 5px;
-    font-size: 2rem;
-  }
-  .search-input::placeholder {
-    font-family: "Karla", sans-serif; 
-    font-size: 2rem;
-    color: #a5a5a5
-    
-  }
+.search-input {
+  height: 35px;
+  width: 240px;
+  border-right: none;
+  position: relative;
+  border: 1.5px solid #000000;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+.search-input::placeholder {
+  font-family: "Karla", sans-serif;
+  font-size: 1.5rem;
+  color: #a5a5a5;
+}
 
-  .search-input:focus {
-    outline: none;
-    border: none;
-    box-shadow: none;
-  }
+.search-input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
 
-  .genre-dropdown {
-    border: 10px ;
-    background-color: transparent; 
-    color: #a5a5a5;
-    font-size: 2.0rem;
-    width: fit-content;
-    min-width: 200px;
-    appearance: none; 
-    -webkit-appearance: none; /* for Safari */
-    -moz-appearance: none; /* for Firefox */
-  }
+.genre-dropdown {
+  border: 10px;
+  background-color: transparent;
+  color: #a5a5a5;
+  font-size: 1.5rem;
+  width: fit-content;
+  min-width: 200px;
+  appearance: none;
+  -webkit-appearance: none; /* for Safari */
+  -moz-appearance: none; /* for Firefox */
+}
 
-  .comics-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-    gap: 87px;
-    justify-content: center;
-    padding: 40px 0;
-    max-width: 100%;
-  }
-  
-  .comic-card img {
-    width: 160px;
-    height: 251px;
-    object-fit: cover;
-    border-radius: 3px;
-    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.25);
-    transition: transform 0.2s ease;
-  }
-  
-  .comic-card img:hover {
-    transform: scale(1.05);
-  }
+.comics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 87px;
+  justify-content: center;
+  padding: 40px 0;
+  max-width: 100%;
+}
+
+.comic-card img {
+  width: 160px;
+  height: 251px;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.comic-card img:hover {
+  transform: scale(1.05);
+}

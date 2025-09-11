@@ -14,11 +14,9 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-fast-marquee": "^1.6.5",
-<<<<<<< HEAD
-    "react-router-dom": "^6.30.1"
-=======
-    "react-select": "^5.10.2"
->>>>>>> 400ea6538af56ceece99463eb5e9260f10ffb026
+    "react-router-dom": "^6.30.1",
+    "react-select": "^5.10.2",
+    "stylis": "^4.3.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",

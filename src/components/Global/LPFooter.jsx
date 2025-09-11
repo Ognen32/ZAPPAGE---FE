@@ -275,7 +275,7 @@ function Footer(props){
           </div>
         </div>
         
-        <div style={{
+        <div className="fire-div" style={{
             position: "absolute",
             bottom: "0",
             left: "0",
@@ -286,8 +286,6 @@ function Footer(props){
             alignItems: "flex-end",
             width: "100%",
             pointerEvents: "none",  
-            
-            
         }}>
              <img src={fire}  style={{ width: "25%", height: "auto"} } />
              <img src={fire} style={{ width: "25%", height: "auto"} }/>
