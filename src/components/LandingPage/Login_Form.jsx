@@ -1,9 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
-
 import borderLeft from "../../assets/border-left.png";
 import borderRight from "../../assets/border-right.png";
-
+import axios from "axios";
 import "../../styles/Login_Form.css";
 import Buttons from "./Buttons";
 
@@ -13,11 +12,41 @@ function LoginForm(props) {
   const errorStyle = {
     border: "3px solid red",
   };
-  const handleSubmit = (e) => {
-  e.preventDefault();
-  console.log("Login form submitted");
-};
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
 
+    try {
+      console.log("Email:", email, "Password:", password);
+      const response = await axios.post(
+        "http://localhost:3000/api/login",
+        {
+          email,
+          password,
+        },
+        { withCredentials: true }
+      );
+
+      SetCorrect(false); 
+      console.log("Login Success:", response.data);
+       if (response.data.user.role === "admin") {
+        window.location.href = "/landingPage"; //zasega
+      } else {
+        window.location.href = "/welcomeUser"; 
+      }
+    } catch (err) {
+      if (err.response) {
+        setError(err.response.data.message || "Login failed");
+        SetCorrect(true); 
+      } else {
+        setError("Network or server error");
+        SetCorrect(true);
+      }
+    }
+  };
   
   return (
     <div className="modal-overlay">
@@ -41,16 +70,15 @@ function LoginForm(props) {
         </div>
 
         <form
-          action="/login_user"
           method="post"
           id="loginForm"
           onSubmit={handleSubmit}
         >
           <label
-            htmlFor="Entering Username"
+            htmlFor="username"
             style={{ color: "red", fontWeight: "600", fontSize: "1.6rem" }}
           >
-            {isCorrect ? "Incorrect username or password " : ""}
+            {isCorrect ? "Incorrect username " : ""}
           </label>
           <div className="inputs">
           <input
@@ -62,7 +90,7 @@ function LoginForm(props) {
             style={isCorrect ? errorStyle : {}}
           />
 
-          <label htmlFor="Entering password"></label>
+          <label htmlFor="password"  style={{ color: "red", fontWeight: "600", fontSize: "1.6rem" }}> {isCorrect ? "Incorrect password " : ""}</label>
           <input
             type="password"
             name="password"
@@ -107,7 +135,6 @@ function LoginForm(props) {
             <input
               type="submit"
               value="SIGN UP"
-              formAction="/create_account"
               className="submit-register"
               aria-label="Create Account"
             />

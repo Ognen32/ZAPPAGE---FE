@@ -32,8 +32,7 @@ function TrendingComics({ comics = [] }) {
             fontWeight: 400,
             lineHeight: "normal",
             margin: 0,
-            fontFamily: "sans-serif",
-            fontStyle: "Karla"
+           fontFamily: "Karla, sans-serif"
           }}
         >
           Trending Comics
