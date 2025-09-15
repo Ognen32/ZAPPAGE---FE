@@ -1,0 +1,203 @@
+
+.containerItem {    
+    display: flex;
+    justify-content: center;   
+    align-items: stretch;       
+    width: 100%;              
+    max-width: 1120px;         
+    padding: 45px 47px;
+    height: 500px;
+    gap: 100px;                 
+    margin: 0 auto;            
+    font-family: "Karla", sans-serif;
+    font-weight: normal;  
+    color: #fff;
+    background-color: #a5a5a5;
+    animation: fadeIn 0.4s ease-in-out;
+    margin: 40px auto 0; 
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+.textAndButtonsContainer {
+    display: flex;
+    width: 646px;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 50px;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.textContainer > p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    cursor: default;
+}
+
+.title {
+    display: flex;
+    min-width: fit-content;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.title h3 {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 0;
+    margin: 0;
+}
+
+.title h2 {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 0;
+    margin: 0;
+    word-wrap: normal;
+}
+
+#containerGenres {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 10px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.genre {
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 1rem;
+    background-color: #4b4b4b;
+    color: #ffff;
+    font-weight: 800;
+    border-radius: 20px;
+    border: 3px solid #ffff;
+    cursor: default;
+
+}
+
+.buttons1 {
+    width: 120px;
+    height: 42px;
+    font-size: 1rem;
+    font-weight: 800;
+    background-color: #fff;
+    color: #0000dc;
+    border: 3px solid #0000dc;
+    box-shadow: 3px 3px 5px 0px #4b4b4b;
+}
+
+.buttons2 {
+    width: 120px;
+    height: 42px;
+    font-size: 1rem;
+    font-weight: 800;
+    background-color: #fff;
+    color: #ff0000;
+    border: 3px solid #ff0000;
+    box-shadow: 3px 3px 5px 0px #4b4b4b;
+}
+
+.buttons1:hover {
+    color: #fff;
+    background-color: #0000dc;
+    cursor: pointer;
+}
+
+.buttons2:hover {
+    color: #fff;
+    background-color: #ff0000;
+    cursor: pointer;
+}
+
+.bookVines {
+    position: relative;
+}
+
+#carouselBooks-inner-container {
+  position: relative; 
+}
+
+.prevNextButtons {
+  position: absolute;
+  bottom: 20px;   
+  right: 200px;    
+  display: flex;
+  gap: 23px;
+}
+
+
+.prevNextButtons input[type="button"] {
+    width: 40px;
+    height: 40px;
+    color: #ff0000;
+    background-color: #fff;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+.prevNextButtons input[type="button"]:hover {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.lightning {
+    animation: flash 2s infinite;
+    transform-origin: top;
+}
+
+@keyframes flash {
+0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  20% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  40% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+}

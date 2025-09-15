@@ -1,0 +1,85 @@
+#containerLatestComics {
+    display: flex;
+    justify-content: center;
+    font-family: "Karla", sans-serif;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    padding: 35px 118px;
+    box-sizing: border-box;
+    overflow: visible; 
+}
+
+#containerLatestComicsInner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    width: 100%; 
+    max-width: 1200px; 
+    box-sizing: border-box;
+    overflow: visible; 
+}
+
+#containerLatestComicsInner h2 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    font-family: "Karla", sans-serif;
+}
+
+
+.holderComicDiv {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    gap: 0;
+    background-color: #a5a5a5;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);
+    
+}
+
+
+.titleAndNumDiv {
+    display: flex;
+    text-transform: uppercase;
+    flex-direction: column;
+    position: relative;
+    justify-content: flex-end;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.titleAndNumDiv span {
+    font-style: normal;
+}
+
+
+.verticalTitle {
+    position: absolute;
+    display: inline-block;
+    transform: rotate(-90deg) translateY(-15px);
+    transform-origin: left top;
+    left: 50%; 
+    bottom: 10%;  
+    white-space: nowrap;
+    font-size: 1.5rem;
+    color: #4b4b4b;
+    pointer-events: none; 
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 200px;
+  }

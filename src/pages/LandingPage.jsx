@@ -41,7 +41,7 @@ useEffect(() => {
       <IntroSection toggleLoginForm={toggleLoginForm} />
       <GenreSection />
       <TrendingComics comics={comicData}/>
-      <LookUpAComicSection />
+      <LookUpAComicSection toggleLoginForm={toggleLoginForm}/>
       <Footer/>
     </div>
      );

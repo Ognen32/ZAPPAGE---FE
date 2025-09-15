@@ -285,7 +285,8 @@ function Footer(props){
             justifyContent: "center", // or "space-between" if you want them spread out
             alignItems: "flex-end",
             width: "100%",
-            pointerEvents: "none",  
+            pointerEvents: "none",
+            overflow: "hidden"
         }}>
              <img src={fire}  style={{ width: "25%", height: "auto"} } />
              <img src={fire} style={{ width: "25%", height: "auto"} }/>

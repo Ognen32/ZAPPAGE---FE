@@ -1,0 +1,78 @@
+#messageContainer {
+    display: flex;
+    padding: 39px 111px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 100%;
+    height: fit-content;
+    background-color: #a5a5a5;
+    font-family: "Karla", sans-serif;
+}
+
+#messageInnerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+
+}
+
+#textContainerWithButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 572px;
+    gap: 37px;
+}
+
+#textContainerWithButton h1 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: normal;
+    width: 1200px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#textContainerWithButton p {
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+}
+
+
+#textContainerWithButton input[type="button"] {
+    background-color: #fff;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0, 0.15);
+    text-align: center;
+    font-size: 1rem;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    color: #ff0000;
+    border: 2px solid #ff0000;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: all 0.2s ease-out;
+}
+
+
+#textContainerWithButton input[type="button"]:hover {
+    color: #fff;
+    background-color: #ff0000;
+}

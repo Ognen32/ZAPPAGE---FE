@@ -1,0 +1,117 @@
+#comicSearchContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 48px 123px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    align-self: center;
+    background-color: #a5a5a5;
+}
+
+#comicsSearchInnerContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 186px);
+    min-height: 500px;
+    column-gap: 145px;
+    row-gap: 45px;
+    width: 1200px;
+    justify-content: space-between;
+}
+
+.comicContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* fix */
+    gap: 5px;
+    width: 186px;
+    height: fit-content;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.comicContainer h4 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    max-width: 165px;
+    white-space: nowrap; /* fix */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: "Karla", sans-serif;
+}
+
+.thisSpan {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    max-width: 175px;
+    white-space: nowrap; /* fix */
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.genreButton {
+    background-color: transparent; /* fix typo */
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 20px;
+    border: 2px solid #fff;
+    font-weight: 700;
+    transition: all 0.15s ease-in;
+    cursor: pointer;
+}
+
+#genreDivContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 1100px;
+    height: fit-content;
+}
+
+.genreButton {
+    background-color: transparent;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 20px;
+    border: 2px solid #fff;
+    font-weight: 700;
+    background-color: transparent;
+    transition: all 0.15s ease-in;
+    cursor: pointer;
+}
+
+  .selectedGenre {
+    color: #fff;
+    border: 2px solid #000;
+    background-color: #303030;
+  }
+
+
+.genreSwiper :global(.swiper-button-prev),
+.genreSwiper :global(.swiper-button-next) {
+  z-index: 10;
+  
+}
+
+.genreSwiper :global(.swiper-button-prev) {
+  left: 0;
+}
+
+.genreSwiper :global(.swiper-button-next) {
+  right: 0;
+}
+
+.swiper-slide {
+  margin-right: 2px; 
+}
