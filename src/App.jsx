@@ -6,6 +6,7 @@ import SearchComicsPage from "./pages/User/SearchComicsPage";
 import ViewProfile from "./pages/User/ViewProfileTab";
 import MyLibrary from "./pages/User/MyLibraryTab";
 import MyFavorites from "./pages/User/MyFavoriteTab";
+import ComicView from "./pages/User/ComicView";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/user/viewProfile" element={<ViewProfile />} />
         <Route path="/user/myLibrary" element={<MyLibrary />} />
         <Route path="/user/favouriteComics" element={<MyFavorites/>} />
+        <Route path="/comic/:slug" element={<ComicView/>} />
       </Routes>
     </Router>
   );

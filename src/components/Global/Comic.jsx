@@ -50,50 +50,50 @@ function Comic({ comic, width, height, fontSize, header }) {
             </p>
           </div>
 
-          <span>
+          <span style={{ display: "flex", alignItems: "center", gap: "5px" }}>
             <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
-                viewBox="0 0 20 22"
-                fill="none"
-              >
-                <g clip-path="url(#clip0_1057_17)">
-                  <path
-                    d="M6 1V5"
-                    stroke="#4b4b4b"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M14 1V5"
-                    stroke="#4b4b4b"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M3 3H17C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21H3C2.46957 21 1.96086 20.7893 1.58579 20.4142C1.21071 20.0391 1 19.5304 1 19V5C1 4.46957 1.21071 3.96086 1.58579 3.58579C1.96086 3.21071 2.46957 3 3 3Z"
-                    stroke="#4b4b4b"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M1 9H19"
-                    stroke="#4b4b4b"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_1057_17">
-                    <rect width="20" height="22" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 20 22"
+              fill="none"
+            >
+              <g clipPath="url(#clip0_1057_17)">
+                <path
+                  d="M6 1V5"
+                  stroke="#4b4b4b"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M14 1V5"
+                  stroke="#4b4b4b"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M3 3H17C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21H3C2.46957 21 1.96086 20.7893 1.58579 20.4142C1.21071 20.0391 1 19.5304 1 19V5C1 4.46957 1.21071 3.96086 1.58579 3.58579C1.96086 3.21071 2.46957 3 3 3Z"
+                  stroke="#4b4b4b"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M1 9H19"
+                  stroke="#4b4b4b"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1057_17">
+                  <rect width="20" height="22" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
             {formattedDate}
           </span>
         </div>
