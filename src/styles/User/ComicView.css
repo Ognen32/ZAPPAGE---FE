@@ -57,10 +57,11 @@
   box-shadow: -5px -2px 0px 0px rgba(0, 0, 0, 0.8);
 }
 
-.textButtonsContainer {
+.readAndFav {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  gap: 500px;
+  margin-top:50px;
 }
 
 .textAndRatingContainer {
@@ -70,6 +71,7 @@
   gap: 10px;
   align-items: stretch;
   height: 200px;
+  margin-bottom: 0;
 }
 
 .textAndRatingContainer h1,
@@ -88,6 +90,7 @@
   font-weight: bolder;
   width: 900px;
   color: #000;
+  text-transform: uppercase;
 }
 
 .textAndRatingContainer h3 {
@@ -96,6 +99,7 @@
   font-weight: normal;
   line-height: normal;
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 .textAndRatingContainer p {
@@ -108,8 +112,12 @@
 }
 
 .readNow  {
+  position:absolute;
+  left:250px;
+  width: 200px;
   font-family: "Bangers", cursive;
   color: #0000dc;
+  max-width: 100px;
   font-size: 1.5rem;
   letter-spacing: 2px;
   background-color: #fff;
@@ -128,6 +136,8 @@
 
 
 .svgButtonsContainer {
+  position:absolute;
+  top: 0px;
   display: flex;
   height: 100%;
   width: 286px;

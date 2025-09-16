@@ -1,14 +1,14 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import UserHeader from "../../components/User/UserHeader";
-import Navigator from "../../components/User/UserTabs/Navigator";
-import ViewProfileSection from "../../components/User/UserTabs/ViewProfileSection";
+import AdminHeader from "../../components/Admin/AdminHeader";
+import Navigation from '../../components/Admin/Navigation';
+import ComicManagementContainer from '../../components/Admin/ComicManagementContainer';
 import FireFooter from "../../components/Global/FireFooter";
 
-function ViewProfile() {
+
+function ComicManagment() {
   const [user, setUser] = useState({});
-  
   useEffect(() => {
     axios
       .get("http://localhost:3000/api/userInfo", { withCredentials: true })
@@ -16,21 +16,23 @@ function ViewProfile() {
         let data = response.data;
         console.log(data.avatar);
         setUser(data);
+        if (data.role === "user") {
+          window.location.href = "/welcomeUser";
+        }
       })
       .catch((err) => {
         console.error(err.response.data);
         window.location.href = "/landingPage";
       });
   }, []);
-
   return (
     <div style={{ maxWidth: "100%", position: "relative" }}>
-      <UserHeader user={user} />
-      <Navigator first={true} svgSize={50} />
-      <ViewProfileSection />
+      <AdminHeader user={user} color="#fff"/>
+      <Navigation user={user} first={true}/>
+      <ComicManagementContainer />
       <FireFooter />
     </div>
   );
 }
 
-export default ViewProfile;
+export default ComicManagment;

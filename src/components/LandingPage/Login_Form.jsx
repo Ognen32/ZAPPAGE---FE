@@ -33,7 +33,7 @@ function LoginForm(props) {
       SetCorrect(false); 
       console.log("Login Success:", response.data);
        if (response.data.user.role === "admin") {
-        window.location.href = "/landingPage"; //zasega
+        window.location.href = "/admin/ComicManagement"; 
       } else {
         window.location.href = "/welcomeUser"; 
       }

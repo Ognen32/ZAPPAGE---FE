@@ -1,13 +1,11 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useRef } from "react";
 import "../../../styles/User/ComicView.css";
-//import BookCartButtons from "./BookCartButtons";
 import ShareFavCommentButtons from "./ShareFavCommentButtons";
 import CommentSection from "./CommentSection";
 
+function ComicDetailsContainer({ comic, user }) {
+  const commentsRef = useRef(null); // Додај референца до коментари
 
-function ComicDetailsContainer({ comic, user}) {
   return (
     <section id="bookContrainerOuter">
       <div id="bookContrainer">
@@ -16,28 +14,28 @@ function ComicDetailsContainer({ comic, user}) {
             <div className="bookImgContainer">
               <img src={comic.mainCover} height={300} width={180} />
             </div>
-            <div className="textButtonsContainer">
-              <div className="textAndRatingContainer">
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "flex-start",
-                    alignSelf: "stretch",
-                    gap: 0,
-                  }}
-                >
-                  <h1>{comic.title}</h1>
-                  <h3>{comic.author}</h3>
-                </div>
-                <p>{comic.shortDescription}</p>
-                  
+            <div className="textAndRatingContainer">
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  alignSelf: "stretch",
+                  gap: 0,
+                }}
+              >
+                <h1>{comic.title}</h1>
+                <h3>{comic.author}</h3>
               </div>
-             <button className="readNow">Read Now!</button>
+              <p>{comic.shortDescription}</p>
             </div>
           </div>
-          <ShareFavCommentButtons comic={comic} />
+          <button className="readNow">Read!</button>
+          <div className="svgButtonsContainer">
+            <ShareFavCommentButtons comic={comic} user={user} commentsRef={commentsRef} />
+          </div>
         </div>
+
         <div
           style={{
             width: "100%",
@@ -46,6 +44,7 @@ function ComicDetailsContainer({ comic, user}) {
             borderRadius: "2px",
           }}
         ></div>
+
         <div className="descriptionAndInfoContainer">
           <div className="descriptionContainer">
             <h3>Description</h3>
@@ -56,7 +55,6 @@ function ComicDetailsContainer({ comic, user}) {
               <h4>Author</h4>
               <p>{comic.author}</p>
             </div>
-
             <div className="titleAndValue">
               <h4>Published</h4>
               <p>
@@ -81,8 +79,9 @@ function ComicDetailsContainer({ comic, user}) {
             </div>
           </div>
         </div>
-        {/* Tuka da se prodolzi za komentari */}
-        <CommentSection comicId={comic.id} user={user} />
+
+        {/* Comment секцијата со референца */}
+        <CommentSection ref={commentsRef} comicId={comic.id} user={user} />
       </div>
     </section>
   );

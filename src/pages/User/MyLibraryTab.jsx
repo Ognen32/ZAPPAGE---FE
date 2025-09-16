@@ -4,6 +4,7 @@ import axios from "axios";
 import UserHeader from "../../components/User/UserHeader";
 import Navigator from "../../components/User/UserTabs/Navigator";
 import MyLibrarySection from "../../components/User/UserTabs/MyLibrarySection";
+import FireFooter from "../../components/Global/FireFooter";
 
 function MyLibrary() {
   const [user, setUser] = useState({});
@@ -50,6 +51,7 @@ function MyLibrary() {
       <UserHeader user={user} />
       <Navigator second={true} svgSize={50} />
       <MyLibrarySection myLibrary={myLibrary} />
+      <FireFooter />
     </div>
   );
 }
