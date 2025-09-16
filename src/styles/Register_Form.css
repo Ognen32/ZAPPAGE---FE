@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" );
+/* ===== Overlay (dimming background) ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999; /* must be below modal but above page */
+}
+
+/* ===== Modal Container ===== */
+.center-containerRegister {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+  width: 450px;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1000;
+}
+
+
+/* ===== Close Button ===== */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #e63946;
+}
+
+/* ===== Title Styling ===== */
+#TitleRegister {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+   
+}
+
+.form-input {
+  width: 100%;
+  height: 34px;
+  padding: 15px;
+  margin: 10px 0px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 24px;
+  font-family: 'Karla', sans-serif;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box; 
+ 
+}
+input[type="date"].form-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 24px;
+  font-family: 'Karla', sans-serif;
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  line-height: normal;
+  background-color: #fff;
+}
+
+.name-row {
+  display: flex;
+  gap: 12px; 
+}
+
+.name-row input {
+  flex: 1; 
+}
+
+.profile-picture{
+  display:flex;
+  flex-direction: column;
+  gap:9px;
+}
+.profile-picture p {
+  margin: 0;
+}
+
+.browse-button{
+  height: 25px;
+  width:  70px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-family: "Karla", sans-serif; 
+  font-size: 16px;
+  border: 1px solid #090909;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.25);
+}
+.pp-div{
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+}
+
+.profile-preview {
+  width: 130px;      
+  height: 130px;
+  border-radius: 50%; 
+  background-color: #ccc; 
+  flex-shrink: 0;   
+}
+
+.profile-container {
+  display: flex;
+  align-items: center; 
+  gap: 20px; 
+  margin-top: 10px;
+  margin-left: 30px; 
+}
+
+
+.termsofservice{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+  align-items: center;
+  
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #0077ff; 
+}
+
+.lower-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:15px;
+  margin-top: 20px;
+  margin-bottom: 30x;
+  
+}
+.termsofservice p {
+  margin: 0;
+}
+.lower-div p {
+  margin: 0;
+}
+
+
+
+

@@ -57,7 +57,7 @@ function LoginForm(props) {
       <button
         className="close-btn"
         aria-label="Close login form"
-        onClick={props.toggleLoginForm}
+        onClick={props.closeModal}
       >
         &#x2716; {/* Unicode X character */}
       </button>
@@ -83,7 +83,7 @@ function LoginForm(props) {
           <div className="inputs">
           <input
             type="text"
-            name="email"
+            name="username"
             id="username"
             placeholder="Username"
             className="form-input"
@@ -137,6 +137,7 @@ function LoginForm(props) {
               value="SIGN UP"
               className="submit-register"
               aria-label="Create Account"
+              onClick={props.toggleLoginForm}
             />
           </div>
         </form>

@@ -3,7 +3,7 @@ import Buttons from "./Buttons";
 import IntroPunch from "../../assets/IntroPunch.png";
 import IntroZAP from "../../assets/IntroZAP.webp";
 
-function IntroSection(props) {
+function IntroSection({openRegisterForm,openLoginForm}) {
   return (
     <section className="intro">
       <div className="intro-outer">
@@ -22,7 +22,9 @@ function IntroSection(props) {
             characters to meet, or adventures to dive into. So grab your spot,
             power up your imagination, and let the stories zap you away!
           </p>
-          <Buttons first="Sign Up!" second="Log In!"  toggleLoginForm={props.toggleLoginForm}   />
+          <Buttons first="Sign Up!" second="Log In!" 
+            openRegisterForm={openRegisterForm}
+            openLoginForm={openLoginForm}    />
         </div>
         <img
           src={IntroPunch}
