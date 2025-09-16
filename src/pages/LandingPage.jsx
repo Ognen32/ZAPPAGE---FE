@@ -11,11 +11,30 @@ import Footer from "../components/Global/LPFooter";
 import Forms from "../components/LandingPage/Forms";
 
 function LandingPage() {
+  const [showForms, setShowForms] = useState(false);
+  const [defaultForm, setDefaultForm] = useState("login"); // "login" or "register"
+  const [comicData, setComicData] = useState([]);
+
+  // Open login modal
+  const openLoginForm = () => {
+    setDefaultForm("login");
+    setShowForms(true);
+  };
+
+  // Open register modal
+  const openRegisterForm = () => {
+    setDefaultForm("register");
+    setShowForms(true);
+  };
+
+  // Close modal
+  const closeForms = () => setShowForms(false);
+
   const [showLogin, setShowLogin] = useState(false);
   const toggleLoginForm = () => {
     setShowLogin((prev) => !prev);
   }
-  const [comicData, setComicData] = useState([]);
+
   const [shouldFetch, setShouldFetch] = useState(false);
   const [searchh, setSearch] = useState("");
   
@@ -35,10 +54,14 @@ useEffect(() => {
   return (
     <div>
       <Header />
-      {showLogin && (
-        <Forms showLogin={showLogin} toggleLoginForm={toggleLoginForm} />
+        {showForms && (
+        <Forms
+          defaultForm={defaultForm}
+          closeForms={closeForms}
+        />
       )}
-      <IntroSection toggleLoginForm={toggleLoginForm} />
+      <IntroSection  openLoginForm={openLoginForm}
+        openRegisterForm={openRegisterForm} />
       <GenreSection />
       <TrendingComics comics={comicData}/>
       <LookUpAComicSection toggleLoginForm={toggleLoginForm}/>
