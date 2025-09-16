@@ -27,8 +27,8 @@
   gap: 44px;
   box-sizing: border-box;
   background-color: #a5a5a5;
-  min-height: 850px;
-  max-height: 850px;
+  min-height: 600px;
+  max-height: 1000px;
   min-width: 1200px;
   max-width: 1200px;
   border-radius: 5px;
@@ -163,6 +163,7 @@
   border: 1px solid #4b4b4b;
   font-size: 1rem;
   box-sizing: border-box;
+  font-family: "Karla", sans-serif;
 }
 
 .profile-form input:focus,

@@ -3,6 +3,7 @@ import axios from "axios";
 import UserHeader from "../../components/User/UserHeader";
 import Navigator from "../../components/User/UserTabs/Navigator";
 import FavoriteComicsSection from "../../components/User/UserTabs/FavoriteComicsSection";
+import FireFooter from "../../components/Global/FireFooter";
 
 function MyFavorites() {
   const [user, setUser] = useState({});
@@ -40,6 +41,7 @@ function MyFavorites() {
       <UserHeader user={user} />
       <Navigator third={true} svgSize={50} />
       <FavoriteComicsSection favourites={favourites} />
+      <FireFooter />
     </div>
   );
 }
