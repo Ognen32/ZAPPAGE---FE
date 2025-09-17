@@ -215,9 +215,8 @@
     box-sizing: border-box;
     background-color: #a5a5a5;
     border-radius: 5px;
-    gap: 76px;
+    gap: 20px;
 }
-
 
 .UserManagementContainer {
     display: flex;
@@ -253,9 +252,10 @@
     padding: 0;
     color: #fff;
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: normal;
+    font-family: "Karla", sans-serif;
 }
 .headersAndButtonRow input[value="Add Comic"] {
     color: #0000dc;
@@ -278,292 +278,344 @@
     background-color: #0000dc;
 }
 
-
+/*comic management add comic form*/
 .mightyForm {
     display: flex;
     flex-direction: column;
-    align-items: start;
     width: 100%;
+    font-family: "Karla", sans-serif;
+    gap: 20px;
 }
 
-.titleDiv {
+.formRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    align-items: flex-start; 
+}
+
+.titleDiv, .authorDiv {
     display: flex;
     flex-direction: column;
-
+    gap: 10px;
+    width: 48%; 
 }
 
-.titleDiv label {
-    font-size: 2.8rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    color: #fff;
+input[type="date"] {
+    padding: 6px 10px; 
+    font-size: 1.5rem; 
+    height: 39px; 
 }
 
-.titleDiv > input {
-    width: 522px;
-    padding: 3px 5px;
-    font-size: 2.4rem;
+.titleDiv input, .authorDiv input {
+    padding: 5px 10px;
+    font-size: 1.5rem;
     border-radius: 2px;
     border: 1px solid black;
-    box-shadow: 1px 2px 0px black;
-    box-sizing: border-box;
     outline: none;
-
+    box-sizing: border-box;
 }
 
-
-.authorDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-
-}
-
-.authorDiv label {
-    font-size: 2.8rem;
-    font-style: normal;
+.titleDiv label,
+.authorDiv label,
+input[type="file"] + label {
+    font-size: 1.5rem;
     font-weight: 700;
-    line-height: normal;
-    color: #fff;
+    color: #fff; 
+    margin-bottom: 0px;
+    display: block;
 }
 
 
-.authorDiv > input {
-    width: 430px;
-    font-size: 2.4rem;
-    padding: 3px 5px;
-    box-sizing: border-box;
-    border: 1px solid black;
-    box-shadow: 1px 2px 0px black;
-    outline: none;
-
+.fileUploadContainer {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 30px;
+  margin-top: 20px;
 }
 
-
-.buttonCover {
-    background-color: #fff;
-    padding: 5px 15px;
-    width: 105px;
-    cursor: pointer;
-    border-radius: 2.5px;
-    font-weight: bold;
-    text-align: center;
-    font-size: 1.6rem;
-    border: 1px solid black;
-    box-shadow: 1px 2px 0px black;
-    box-sizing: border-box;
-    transition: all 0.2s ease-in;
+.fileBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 160px; 
 }
 
-.buttonCover:hover {
-    background-color: #603A23;
-    color: #fff;
-
+.fileBox label {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
 }
 
+.fileInput {
+  display: none;
+}
 
-.thinScrollbar::-webkit-scrollbar-button {
-    display: none;  /* hides the up/down or left/right arrows */
-  }
-  
-  .thinScrollbar::-webkit-scrollbar {
-    width: 4px;
-    height: 6px;
-  }
-  
-  .thinScrollbar::-webkit-scrollbar-track {
-    background: transparent;
-    
-  }
-  
-  .thinScrollbar::-webkit-scrollbar-thumb {
-    background-color: #0000005b;
-    border-radius: 5px;
-    border: 1px solid transparent;
-  }
-  
-  .thinScrollbar::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-    cursor: default;
-  }
+.chooseFileButton {
+  background-color: #fff;
+  border: 1.5px solid black;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 1px 2px 0px black;
+  transition: all 0.2s ease-in-out;
+}
 
+.chooseFileButton:hover {
+  background-color: #4b4b4b;
+  color: #fff;
+}
 
-  .containerPublishedPublisher {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-    align-items: start;
-    height: 100%;
-  }
+.previewImage {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  
+}
 
-  .containerPublished {
+.pagesZip {
     display: flex;
     flex-direction: column;
+    gap: 5px;
+}
 
-  }
-
-  .containerPublisher {
+.descriptionRow {
     display: flex;
-    flex-direction: column;
-    align-items: end;
-  }
+    gap: 20px;
+}
 
-  .genreButton {
-    background-color: #fff;
-    font-size: 1.8rem;
-    color: #fff;
-    border-radius: 10px;
+.descriptionTextarea {
+  width: 40%;
+  min-height: 50px; 
+  padding: 12px;
+  font-size: 1.2rem;
+  border-radius: 8px; 
+  border: 2px solid #fff;
+  box-shadow: 1px 2px 4px rgba(0,0,0,0.1);
+  resize: vertical;
+  font-family: "Karla", sans-serif;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  border-color: #303030;
+}
+
+.genreSwiper {
+    margin-top: 10px;
+}
+
+.genreButton {
     padding: 5px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
     border: 3px solid #fff;
-    font-weight: 700;
     background-color: transparent;
-    transition: all 0.15s ease-in;
     cursor: pointer;
+    font-weight: 700;
+    transition: 0.15s ease-in;
 }
 
 .selectedGenre {
+    background-color: #4b4b4b;
+    border: 3px solid #fff;
     color: #fff;
-    border: 3px solid rgb(70, 60, 51);
-    background-color: #6e5743;
-  }
-
-
-  .SubmitButton {
-    color: #000;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    background-color: #fff;
-    border-radius: 3px;
-    font-family: "Karla", sans-serif;
-    border: 1.9px solid black;
-    box-shadow: 1px 2px 0px black;
-    font-size: 2.8rem;
-    transition: all 0.4s ease-out;
-    padding: 2px 25px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-
-  .CancelButton {
-    color: #000;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    background-color: #fff;
-    border-radius: 3px;
-    font-family: "Karla", sans-serif;
-    border: 1.9px solid black;
-    box-shadow: 1px 2px 0px black;
-    font-size: 2.8rem;
-    transition: all 0.4s ease-out;
-    padding: 2px 25px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-
-
-  .SubmitButton:hover {
-    background-color: #603A23;
-    color: #fff;
-  }
-
-  .CancelButton:hover {
-    background-color: #a8845c;
-    color: #fff;
-  }
-
-  .no_spinner::-webkit-outer-spin-button,
-.no_spinner::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
 
-.no_spinner {
-  -moz-appearance: textfield; /* Firefox */
-  appearance: textfield;
+.SubmitButton, .CancelButton {
+    padding: 5px 25px;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.4s ease-out;
+    background-color: #fff;
+}
+.SubmitButton {
+  border: 3px solid #0000dc;
+  color:#0000dc
 }
 
-.no_spinner::placeholder {
-    color: #fff;
-    opacity: 1; /* Make sure it's fully visible */
-  }
+.CancelButton{
+  border: 3px solid #ff0000;
+  color: #ff0000;
+}
 
-.PicksANDReturnContainer {
-  display: flex;
-  gap: 10px;
-  flex-direction: row;
+.SubmitButton:hover {
+    background-color: #0000dc;
+    color: #fff;
+}
+
+.CancelButton:hover {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+/*Comics list*/
+.comicsListContainer {
+   max-height: 600px; /* висината на секцијата, прилагоди по желба */
+  overflow-y: auto;
   width: 100%;
-  justify-content: start;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
 }
 
-.PicksANDReturnContainer p {
+.comicRow {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  padding: 10px 0;
+  color: #fff;
+  font-family: "Karla", sans-serif;
+}
+
+.comicId {
+  width: 40px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.comicCover img {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 2px solid #303030;
+}
+
+.comicTitle {
+  flex: 1;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.comicActions button {
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 3px;
+    font-family: "Karla", sans-serif;
+    box-shadow: 1px 2px 0px rgb(0, 0, 0, 0,5);
+    font-size: 1.5rem;
+    transition: all 0.4s ease-out;
+    padding: 2px 13px;
+    box-sizing: border-box;
+    width: 145px;
+    
+}
+
+.updateButton{
+  border: 3px solid #ffff00;
+  background-color: #fff;
+  color: #ffff00;
+  margin-bottom: 30px;
+   text-shadow: 1px 1px 1px #000;
+}
+
+.updateButton:hover {
+  background-color: #ffff00;
+  color:#fff;
+}
+
+.deleteButton {
+   border: 3px solid #ff0000;
+  background-color: #fff;
+  color: #ff0000;
+}
+
+.deleteButton:hover {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.comicDivider {
+  border: none;
+  border-top: 2px solid #fff;
+  margin: 5px 0;
+  opacity: 0.5;
+}
+
+/*delete comic pop up*/
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popupContent {
+  background: #fff;
+  width: 450px;
+  height: 300px;
+  padding: 20px 30px;
+  border-radius: 10px;
   color: #000;
-  font-size: 2.4rem;
-  margin: 0;
-  padding: 0;
-  font-weight: 700;
-  line-height: normal;
+  text-align: center;
+  border: #ff0000 solid 2px;
+  font-family: "Karla", sans-serif;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.popupContent h2 {
+  color: #ff0000;
+  margin-top: 0px;
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+
+.popupContent span {
+  text-decoration: solid underline #000;
+  font-style: italic;
+}
+
+.popupButtons {
+  display: flex;
+  justify-content: center; 
+  gap: 35px; 
+}
+.confirmButton {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.cancelButton {
+  background-color: #4b4b4b;
+  color: #fff;
+}
+
+.confirmButton,
+.cancelButton {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-
+  font-weight: 700;
+  font-size: 15px;
+  transition: 2s smooth;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.ButtonsAndContainers {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  height: fit-content;
+.confirmButton:hover,
+.cancelButton:hover {
+  transform: scale(1.2);
 }
 
-.TransactionsContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  align-items: start;
-  align-self: stretch;
-  max-height: 640px;
-  overflow-y: scroll;
-  scrollbar-width: none;       /* Firefox */
-  scrollbar-color: #683a3a transparent; /* Firefox: thumb color + track */
-}
 
-.TransactionsContainer::-webkit-scrollbar-button {
-  display: none !important;
-}
-
-.PickUpTransactionContainer {
-  display: flex;
-  gap: 87px;
-  padding: 28px 38px;
-  box-sizing: border-box;
-  min-width: 100%;
-  min-height:273px;
-  min-height:273px;
-  background-color: #A68870;
-  border-radius: 4px;
-  justify-content: start;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-.BookReturnTransactionContainer {
-  display: flex;
-  gap: 87px;
-  padding: 28px 38px;
-  box-sizing: border-box;
-  min-width: 100%;
-  min-height:273px;
-  min-height:273px;
-  background-color: #A68870;
-  border-radius: 4px;
-  justify-content: start;
-  align-items: center;
-  box-sizing: border-box;
-}
+/*DO TUKA*/
 
 .userInfoTransInfoANDBooksContainer {
   display: flex;

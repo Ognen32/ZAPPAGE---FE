@@ -4,16 +4,28 @@ import SVGTitleAndSearchContainer from "./SVGTitleAndSearchContainer";
 import { ComicManagmenet } from "./AdminSVGs";
 import ComicsPagination from "./ComicsPagination";
 import AddComicForm from "./AddComicForm";
+import ComicsList from "./ComicsList";
+import UpdateComicForm from "./UpdateComicForm"; 
 
 function ComicManagementContainer() {
-  const [showAddComicForm, setshowAddComicForm] = useState(false);
+  const [showAddComicForm, setShowAddComicForm] = useState(false);
+  const [showUpdateComicForm, setShowUpdateComicForm] = useState(false);
+  const [comicToUpdate, setComicToUpdate] = useState(null);
+
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const waitingIntervalRef = useRef(null);
 
   const toggleAddComicForm = () => {
-    setshowAddComicForm((prev) => !prev);
+    setShowAddComicForm((prev) => !prev);
+    setShowUpdateComicForm(false);
     setErrorMessage("");
+  };
+
+  const handleUpdateClick = (comic) => {
+    setComicToUpdate(comic);
+    setShowUpdateComicForm(true);
+    setShowAddComicForm(false);
   };
 
   const handleShowWaiting = () => {
@@ -39,6 +51,7 @@ function ComicManagementContainer() {
   const createshowError = (message) => {
     setErrorMessage(message);
   };
+
   return (
     <div
       style={{
@@ -61,10 +74,20 @@ function ComicManagementContainer() {
           errorMessage={errorMessage}
           successMessage={successMessage}
         />
-        {!showAddComicForm && (
-          <ComicsPagination addComic={toggleAddComicForm} />
-        )}
-        {showAddComicForm && (
+
+        {/* 🟢 ако е активна Update форма */}
+        {showUpdateComicForm ? (
+          <UpdateComicForm
+  comicId={comicToUpdate.id}  // <-- вака ќе го имаш comicId
+  cancelButton={() => setShowUpdateComicForm(false)}
+  createshowError={createshowError}
+  handleShowWaiting={handleShowWaiting}
+  stopWaitingWithSuccess={stopWaitingWithSuccess}
+  stopWaitingWithFailed={stopWaitingWithFailed}
+/>
+
+        ) : showAddComicForm ? (
+          /* 🟢 ако е активна Add форма */
           <AddComicForm
             cancelButton={toggleAddComicForm}
             createshowError={createshowError}
@@ -73,6 +96,12 @@ function ComicManagementContainer() {
             stopWaitingWithSuccess={stopWaitingWithSuccess}
             stopWaitingWithFailed={stopWaitingWithFailed}
           />
+        ) : (
+          /* 🟢 default view: Pagination + ComicsList */
+          <>
+            <ComicsPagination addComic={toggleAddComicForm} />
+            <ComicsList onUpdateClick={handleUpdateClick} />
+          </>
         )}
       </div>
     </div>
