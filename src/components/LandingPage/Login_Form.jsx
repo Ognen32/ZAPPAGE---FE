@@ -16,7 +16,7 @@ function LoginForm(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
-    const email = form.email.value;
+    const email = form.username.value;
     const password = form.password.value;
 
     try {
@@ -49,7 +49,11 @@ function LoginForm(props) {
   };
   
   return (
-    <div className="modal-overlay">
+  <div className="modal-overlay" onClick={(e) => {
+      if (e.target.classList.contains("modal-overlay")) {
+        props.closeModal();
+      }
+    }}>
     <div
       id="center-containerLogin"
       className={`zoomIn ${isCorrect ? "errorStyle" : ""}`}
@@ -59,7 +63,7 @@ function LoginForm(props) {
         aria-label="Close login form"
         onClick={props.closeModal}
       >
-        &#x2716; {/* Unicode X character */}
+        &#x2716;
       </button>
      
       <div id="centeringLogin">
@@ -143,8 +147,9 @@ function LoginForm(props) {
         </form>
       </div>
     </div>
-    </div>
-  );
+  </div>
+);
+
 }
 
 export default LoginForm;

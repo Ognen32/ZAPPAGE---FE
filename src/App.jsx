@@ -24,6 +24,7 @@ function App() {
         <Route path="/comic/:slug" element={<ComicView/>} />
 
         <Route path="/admin/ComicManagement" element={<ComicManagment/>} />
+        
       </Routes>
     </Router>
   );
