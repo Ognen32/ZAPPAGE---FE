@@ -122,7 +122,7 @@ function LookUpAComicSection(props) {
               <img
                 src={comic.coverArt}
                 alt={comic.title}
-                onClick={props.toggleLoginForm}
+                onClick={props.openLoginForm}
                 style={{ cursor: "pointer" }}
               />
             </div>

@@ -69,10 +69,11 @@ function SVGTitleAndSearchContainer({
               color: "white",
               margin: 0,
               padding: 0,
-              fontSize: "4rem",
+              fontSize: "3rem",
               fontWeight: "700",
               fontStyle: "normal",
               lineHeight: "normal",
+              fontFamily: "Karla, sans-serif",
             }}
           >
             {title}
@@ -120,7 +121,7 @@ function SVGTitleAndSearchContainer({
             <input
               type="text"
               name="Search"
-              placeholder="Search by title..."
+              placeholder="Search..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               style={{

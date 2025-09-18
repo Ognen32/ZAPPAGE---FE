@@ -49,15 +49,35 @@ function LoginForm(props) {
   };
 
   return (
-    <div className="modal-overlay">
-      <div
-        id="center-containerLogin"
-        className={`zoomIn ${isCorrect ? "errorStyle" : ""}`}
+
+  <div className="modal-overlay" onClick={(e) => {
+      if (e.target.classList.contains("modal-overlay")) {
+        props.closeModal();
+      }
+    }}>
+    <div
+      id="center-containerLogin"
+      className={`zoomIn ${isCorrect ? "errorStyle" : ""}`}
+    >
+      <button
+        className="close-btn"
+        aria-label="Close login form"
+        onClick={props.closeModal}
       >
-        <button
-          className="close-btn"
-          aria-label="Close login form"
-          onClick={props.closeModal}
+        &#x2716;
+      </button>
+     
+      <div id="centeringLogin">
+        <div id="TitleLogin">
+          <img src={borderLeft} width="110" height="10" alt="Left Border" />
+          <h1 className="form-title-heading">ZAPPAGE</h1>
+          <img src={borderRight} width="110" height="10" alt="Right Border" />
+        </div>
+
+        <form
+          method="post"
+          id="loginForm"
+          onSubmit={handleSubmit}
         >
           &#x2716; {/* Unicode X character */}
         </button>
@@ -152,7 +172,10 @@ function LoginForm(props) {
         </div>
       </div>
     </div>
-  );
+
+  </div>
+);
+
 }
 
 export default LoginForm;

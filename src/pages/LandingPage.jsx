@@ -60,9 +60,10 @@ function LandingPage() {
         openRegisterForm={openRegisterForm}
       />
       <GenreSection />
-      <TrendingComics comics={comicData} />
-      <LookUpAComicSection toggleLoginForm={toggleLoginForm} />
-      <Footer />
+
+      <TrendingComics comics={comicData}/>
+      <LookUpAComicSection openLoginForm={openLoginForm} />
+      <Footer/>
     </div>
   );
 }

@@ -7,7 +7,7 @@ import instructionManual from "../../assets/ZAPPAGE-Instruction-Manual.pdf";
 
 const AdminHeader = (props) => {
   return (
-    <header id="home">
+    <header id="homeA">
       <div className="logo-container">
         <img src={Logo} alt="ZAPPAGE logo" className="logo" />
       </div>
