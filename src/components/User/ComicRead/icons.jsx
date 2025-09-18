@@ -1,12 +1,13 @@
 import React from "react";
 
-export function ArrowLeftIcon({ className = "" }) {
+export function ArrowLeftIcon({ className = "", style }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 12 10"
       fill="none"
       className={className}
+      style = {style}
     >
       <path
         d="M10.25 5H1.25M1.25 5L5 8.75M1.25 5L5 1.25"
@@ -19,13 +20,14 @@ export function ArrowLeftIcon({ className = "" }) {
   );
 }
 
-export function ArrowRightIcon({ className = "" }) {
+export function ArrowRightIcon({ className = "", style }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 12 10"
       fill="none"
       className={className}
+      style={style}
     >
       <path
         d="M1.75 5H10.75M10.75 5L7 8.75M10.75 5L7 1.25"
@@ -38,7 +40,7 @@ export function ArrowRightIcon({ className = "" }) {
   );
 }
 
-export function ExpandIcon({ className = "" }) {
+export function ExpandIcon({ className = "", style }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -47,6 +49,7 @@ export function ExpandIcon({ className = "" }) {
       width="1em" // ✅ scalable via font size (or Tailwind width)
       height="1em"
       className={className}
+      style={style}
     >
       <g clipPath="url(#clip0_347_315)">
         <path
@@ -70,7 +73,7 @@ export function ExpandIcon({ className = "" }) {
   );
 }
 
-export function ArrowDownIcon({ className = "" }) {
+export function ArrowDownIcon({ className = "", style }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -79,6 +82,7 @@ export function ArrowDownIcon({ className = "" }) {
       viewBox="0 0 14 9"
       fill="none"
       className={className}
+      style={style}
     >
       <path
         fillRule="evenodd"

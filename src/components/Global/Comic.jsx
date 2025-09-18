@@ -2,7 +2,8 @@ import React from "react";
 import "../../styles/Comic.css";
 import { useNavigate } from "react-router-dom";
 
-function Comic({ comic, width, height, fontSize, header }) {
+function Comic({ comic, width, height, fontSize, header, progressBar= "" }) {
+  
   const navigate = useNavigate();
 
   const navigatorComic = () => {
@@ -49,7 +50,11 @@ function Comic({ comic, width, height, fontSize, header }) {
               {genres}
             </p>
           </div>
-
+          <div style={{
+            display:"flex",
+            flexDirection: "column",
+            gap: "2px"
+          }}>
           <span style={{ display: "flex", alignItems: "center", gap: "5px" }}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -96,6 +101,35 @@ function Comic({ comic, width, height, fontSize, header }) {
             </svg>
             {formattedDate}
           </span>
+
+         {progressBar && (
+  <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: "3px", alignItems:"end" }}>
+    {/* Text on top */}
+    <span style={{ fontSize: 16, fontWeight: 600 }}>
+      {`${progressBar} / ${comic.page_count} pages`}
+    </span>
+
+    {/* Bar container */}
+    <div style={{
+      width: "100%",
+      height: "8px",
+      backgroundColor: "#e0e0e0",
+      borderRadius: "4px",
+      overflow: "hidden"
+    }}>
+      {/* Dynamic bar */}
+      <div style={{
+        width: `${(progressBar / comic.page_count) * 100}%`,
+        height: "100%",
+        backgroundColor: "#4b4b4b",
+        borderRadius: "4px 0 0 4px",
+        transition: "width 0.3s ease"
+      }}></div>
+    </div>
+  </div>
+)}
+
+          </div>
         </div>
 
         <div className="moreInfoContainer">

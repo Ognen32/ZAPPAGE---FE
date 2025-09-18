@@ -25,26 +25,27 @@ function MyLibrary() {
       });
   }, []);
 
- /* useEffect(() => {
+ useEffect(() => {
     axios
-      .get("http://localhost:3000/api/transcation/myLibrary", {
+      .get("http://localhost:3000/api/myLibrary", {
         withCredentials: true,
       })
       .then((response) => {
         if (response) {
           let data = response.data;
+          console.log(data[0].Comic);
           setMyLibrary(data);
           setLoading(false);
         }
       })
       .catch((err) => {
         console.error(err.response.data);
-        window.location.href = "/welcome";
+        window.location.href = "/welcomeUser";
       });
   }, []);
   if (loading) {
     return <p style={{ padding: "100px", fontSize: "20px" }}></p>;
-  } */
+  } 
 
   return (
     <div style={{ maxWidth: "100%", position: "relative" }}>

@@ -61,11 +61,19 @@ function Pages({ pages, currentPage }) {
               <img
                 src={current.pageUrl}
                 alt={`Page ${current.page}`}
-                className="object-contain relative cursor-zoom-in border-4 border-transparent rounded-lg bg-gradient-to-r from-yellow-700 via-yellow-600 to-yellow-500"
                 style={{
                   height: "100%",
                   width: "auto",
                   display: "inline-block",
+                  objectFit: "contain",
+                  position: "relative",
+                  cursor: "zoom-in",
+                  borderWidth: "4px",
+                  borderStyle: "solid",
+                  borderColor: "transparent",
+                  borderRadius: "8px", // rounded-lg = 0.5rem = 8px
+                  background:
+                    "linear-gradient(to right, #B45309, #D97706, #F59E0B)", // from-yellow-700 via-yellow-600 to-yellow-500
                 }}
               />
             </Zoom>
