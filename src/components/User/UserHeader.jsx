@@ -7,7 +7,7 @@ import DropdownMenu from "../Global/DropdownMenu";
 
 const UserHeader = (props) => {
   return (
-    <header id="home">
+    <header id="homeU">
       <div className="logo-container">
         <img src={Logo} alt="ZAPPAGE logo" className="logo" />
       </div>

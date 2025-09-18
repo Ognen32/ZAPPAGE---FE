@@ -64,7 +64,7 @@ useEffect(() => {
         openRegisterForm={openRegisterForm} />
       <GenreSection />
       <TrendingComics comics={comicData}/>
-      <LookUpAComicSection toggleLoginForm={toggleLoginForm}/>
+      <LookUpAComicSection openLoginForm={openLoginForm} />
       <Footer/>
     </div>
      );

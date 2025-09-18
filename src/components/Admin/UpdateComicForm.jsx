@@ -21,7 +21,7 @@ function UpdateComicForm({ comicId, cancelButton, onSuccess, createshowError, ha
   useEffect(() => {
     const fetchComic = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/comic/${comicId}`);
+        const res = await axios.get(`http://localhost:3000/api/comics/${comicId}`);
         const data = res.data;
         setComicData(data);
 
@@ -186,7 +186,6 @@ function UpdateComicForm({ comicId, cancelButton, onSuccess, createshowError, ha
 
       {/* Show comic pages */}
       <div style={{ marginTop: "30px" }}>
-        <label style={{ fontSize: "1.5rem", fontWeight: "700", color: "#fff" }}>Comic Pages</label>
         <div className="comicPagesContainer">
           {comicPages.map(page => (
             <img

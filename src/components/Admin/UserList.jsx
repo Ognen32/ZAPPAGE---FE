@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../../styles/AdminView.css";
 
-function UserList({ onUpdateClick }) {
+function UserList({ onUpdateClick, onUsersChanged }) {
   const [users, setUsers] = useState([]);
   const [userToDelete, setUserToDelete] = useState(null);
 
@@ -25,7 +25,7 @@ function UserList({ onUpdateClick }) {
   const confirmDelete = async () => {
     if (!userToDelete) return;
     try {
-      await axios.delete(`http://localhost:3000/api/users/delete/${userToDelete.id}`);
+      await axios.delete(`http://localhost:3000/api/removeUser/${userToDelete.id}`);
       setUserToDelete(null);
       fetchUsers();
     } catch (err) {

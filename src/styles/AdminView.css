@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
-#home {
+#homeA {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -11,9 +11,12 @@
   box-sizing: border-box;
   font-family: "Karla", sans-serif;
   background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-#nav {
+#navA {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -22,13 +25,13 @@
   font-size: 2rem;
 }
 
-#nav a {
+#navA a {
   text-decoration: none;
   color: #4b4b4b;
   font-weight: normal;
 }
 
-#nav a:hover {
+#navA a:hover {
   color: #f5f500;
   transform: scale(1.1);
   transition: all 0.5s ease-out;
