@@ -5,7 +5,7 @@ import { ComicManagmenet } from "./AdminSVGs";
 import ComicsPagination from "./ComicsPagination";
 import AddComicForm from "./AddComicForm";
 import ComicsList from "./ComicsList";
-import UpdateComicForm from "./UpdateComicForm"; 
+import UpdateComicForm from "./UpdateComicForm";
 
 function ComicManagementContainer() {
   const [showAddComicForm, setShowAddComicForm] = useState(false);
@@ -78,14 +78,13 @@ function ComicManagementContainer() {
         {/* 🟢 ако е активна Update форма */}
         {showUpdateComicForm ? (
           <UpdateComicForm
-  comicId={comicToUpdate.id}  // <-- вака ќе го имаш comicId
-  cancelButton={() => setShowUpdateComicForm(false)}
-  createshowError={createshowError}
-  handleShowWaiting={handleShowWaiting}
-  stopWaitingWithSuccess={stopWaitingWithSuccess}
-  stopWaitingWithFailed={stopWaitingWithFailed}
-/>
-
+            comicId={comicToUpdate.id}
+            cancelButton={() => setShowUpdateComicForm(false)}
+            createshowError={createshowError}
+            handleShowWaiting={handleShowWaiting}
+            stopWaitingWithSuccess={stopWaitingWithSuccess}
+            stopWaitingWithFailed={stopWaitingWithFailed}
+          />
         ) : showAddComicForm ? (
           /* 🟢 ако е активна Add форма */
           <AddComicForm

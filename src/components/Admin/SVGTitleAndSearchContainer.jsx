@@ -121,7 +121,7 @@ function SVGTitleAndSearchContainer({
             <input
               type="text"
               name="Search"
-              placeholder="Search by title..."
+              placeholder="Search..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               style={{

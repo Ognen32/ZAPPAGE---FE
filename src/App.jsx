@@ -8,6 +8,7 @@ import MyLibrary from "./pages/User/MyLibraryTab";
 import MyFavorites from "./pages/User/MyFavoriteTab";
 import ComicView from "./pages/User/ComicView";
 import ComicManagment from "./pages/Admin/ComicManagementPage";
+import UserManagement from "./pages/Admin/UserManagementPage";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <Route path="/comic/:slug" element={<ComicView/>} />
 
         <Route path="/admin/ComicManagement" element={<ComicManagment/>} />
-        
+        <Route path="/admin/UserManagement" element={<UserManagement/>} />
       </Routes>
     </Router>
   );
