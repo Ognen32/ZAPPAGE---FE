@@ -9,6 +9,7 @@ import MyFavorites from "./pages/User/MyFavoriteTab";
 import ComicView from "./pages/User/ComicView";
 import ComicManagment from "./pages/Admin/ComicManagementPage";
 import UserManagement from "./pages/Admin/UserManagementPage";
+import ComicReading from "./pages/User/ComicReading";
 
 function App() {
   return (
@@ -21,8 +22,10 @@ function App() {
         <Route path="/search" element={<SearchComicsPage />} />
         <Route path="/user/viewProfile" element={<ViewProfile />} />
         <Route path="/user/myLibrary" element={<MyLibrary />} />
-        <Route path="/user/favouriteComics" element={<MyFavorites/>} />
-        <Route path="/comic/:slug" element={<ComicView/>} />
+        <Route path="/user/favouriteComics" element={<MyFavorites />} />
+        <Route path="/comic/:slug" element={<ComicView />} />
+        <Route path="/reading/:slug" element={<ComicReading />} />
+
 
         <Route path="/admin/ComicManagement" element={<ComicManagment/>} />
         <Route path="/admin/UserManagement" element={<UserManagement/>} />
