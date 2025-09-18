@@ -4,6 +4,7 @@ import { useParams, useSearchParams } from "react-router-dom";
 import axios from "axios";
 import SideBar from "../../components/User/ComicRead/sidebar";
 import Pages from "../../components/User/ComicRead/pages";
+import "../../styles/User/ComicPage.css";
 
 function ComicReading() {
   const [user, setUser] = useState({});
@@ -96,7 +97,8 @@ function ComicReading() {
   };
 
   return (
-    <div className="sm:hidden md:flex md:flex-row h-screen w-full bg-bg">
+    <div className="primer">
+    <div className="sm:hidden md:flex md:flex-row h-screen w-full bg-[#141212]">
       <SideBar
         title={title}
         currentPage={currentPage}
@@ -109,6 +111,7 @@ function ComicReading() {
         updateCurrentPageOnServer={updateCurrentPageOnServer}
       />
       <Pages pages={pages} currentPage={currentPage} />
+    </div>
     </div>
   );
 }

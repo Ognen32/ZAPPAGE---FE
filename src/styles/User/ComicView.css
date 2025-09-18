@@ -1,6 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+[data-rmiz-modal-overlay="visible"] {
+      background-color: rgba(20, 18, 18, 1) !important;
+    }
+
+
+  .selector {
+  /* For example: */
+  -webkit-text-stroke: 2px #B41D1D;
+}
+
 #bookContrainerOuter {
   display: flex;
   flex-direction: column;
