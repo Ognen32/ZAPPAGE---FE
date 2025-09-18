@@ -36,7 +36,7 @@ function ComicReading() {
     if (!slug) return;
 
     axios
-      .get(`http://localhost:3000/api/comic/${slug}`, { withCredentials: true })
+      .get(`http://localhost:3000/api/comicRead/${slug}`, { withCredentials: true })
       .then((response) => {
         const data = response.data;
         const newPages = data.pages;
@@ -68,7 +68,7 @@ function ComicReading() {
   const updateCurrentPageOnServer = async (page) => {
     try {
       await axios.post(
-        `http://localhost:3000/api/comic/${slug}/updateCurrentPage`,
+        `http://localhost:3000/api/comicRead/${slug}/updateCurrentPage`,
         { newPageNumber: page },
         { withCredentials: true }
       );
