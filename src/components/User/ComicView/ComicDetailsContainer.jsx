@@ -2,9 +2,16 @@ import React, { useRef } from "react";
 import "../../../styles/User/ComicView.css";
 import ShareFavCommentButtons from "./ShareFavCommentButtons";
 import CommentSection from "./CommentSection";
+import { useNavigate } from "react-router-dom";
 
 function ComicDetailsContainer({ comic, user }) {
-  const commentsRef = useRef(null); // Додај референца до коментари
+  const commentsRef = useRef(null); 
+
+  const navigate = useNavigate();
+
+  const handleReadClick = () => {
+    navigate(`/reading/${comic.slug}`);
+  };
 
   return (
     <section id="bookContrainerOuter">
@@ -30,7 +37,7 @@ function ComicDetailsContainer({ comic, user }) {
               <p>{comic.shortDescription}</p>
             </div>
           </div>
-          <button className="readNow">Read!</button>
+          <button className="readNow" onClick={handleReadClick}>Read!</button>
           <div className="svgButtonsContainer">
             <ShareFavCommentButtons comic={comic} user={user} commentsRef={commentsRef} />
           </div>
