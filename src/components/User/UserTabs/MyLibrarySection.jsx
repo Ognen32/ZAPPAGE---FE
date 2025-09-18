@@ -1,14 +1,12 @@
 import React from "react";
 import "../../../styles/User/UserTabs.css";
 import SVGandTitle from "./SVGandTitle";
-import ComicGrid from "./ComicGrid";
+import ComicGrid from "./ComicGridLib";
 import { MyLibrary } from "./Svgs";
 
 
 
-function MyLibrarySection({ myLibrary }) {
-
-    const isEmpty = !myLibrary || myLibrary.length === 0;
+function MyLibrarySection({ myLibrary=[] }) {
 
   return (
     <div
@@ -28,7 +26,7 @@ function MyLibrarySection({ myLibrary }) {
       >
         <SVGandTitle Image={MyLibrary} title="My Library" svgSize={44} />
 
-         {/* <ComicGrid comics={myLibrary} /> */}
+         <ComicGrid comics={myLibrary} /> 
         
       </div>
     </div>

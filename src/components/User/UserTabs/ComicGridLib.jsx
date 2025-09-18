@@ -19,11 +19,12 @@ function ComicsGrid({ comics }) {
             }}
           >
             <Comic
-              comic={comic}
+              comic={comic.Comic}
               width="186px"
               height="257px"
               fontSize="1.6rem"
               header="2rem"
+              progressBar= {comic.currentPageNumber}
             />
             <h3
               style={{
